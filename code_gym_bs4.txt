@@ -1,0 +1,7 @@
+import requests
+from bs4 import BeautifulSoup
+
+resp = requests.get('https://code-gym.github.io/spider_demo/')
+soup = BeautifulSoup(resp.text, 'html5lib')
+h1 = soup.h1.text
+print(h1)
